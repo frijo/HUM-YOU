@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+ @import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 /*!
  * Bootswatch v3.2.0
  * Homepage: http://bootswatch.com
@@ -1742,7 +1742,9 @@ pre code {
   }
   .col-md-11 {
     width: 91.66666667%;
-  }
+
+
+ }
   .col-md-10 {
     width: 83.33333333%;
   }
@@ -5174,7 +5176,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-heading {
   color: #333333;
-  background-color: #f5f5f5;
+  background-color: #43ac6a;
   border-color: #dddddd;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
@@ -6474,21 +6476,38 @@ label,
 .modal .close {
   color: #222222;
 }
-.navbar-login
+.container{
+    margin-top:20px;
+}
+.image-preview-input {
+    position: relative;
+  overflow: hidden;
+  margin: 0px;    
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;    
+}
+.image-preview-input input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+    margin-left:2px;
+}
+#bn-login
 {
-    width: 305px;
+  padding: 10px;
+}
+#bn-Profile,
+#bn-DropProfile
+{
     padding: 10px;
-    padding-bottom: 0px;
 }
 
-.navbar-login-session
-{
-    padding: 10px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-}
-
-.icon-size
-{
-    font-size: 87px;
-}

@@ -1,18 +1,19 @@
 @extends('layouts.base')
+
 @section('cabecera')
     @parent
 @stop
+
 @section('cuerpo')
 	@parent
-
-		<div class="row">
+	<div class="row">
 		  <div class="col-md-6">
 		    <div class="panel panel-default">
 		      <div class="panel-heading text-center">
-		      		<h1>Create User</h1>
+		      		<h1>Edit User</h1>
 		      </div>
 		      <div class="panel-body">
-						{{ Form::open(array('url' => '/signin', 'role'=>'form','enctype' =>'multipart/form-data' )) }}
+						{{ Form::open(array('url' => '/edit' , 'role'=>'form','enctype' =>'multipart/form-data' )) }}
 						  
 						  {{-- USERNAME ------------------------}}
 						  <div class="form-group">
@@ -26,7 +27,7 @@
 					              'maxlength'   => '20'))
 									}}
 									<p class="text-danger">
-										{{ $errors->signin->first('username') }}
+										{{ $errors->edit->first('username') }}
 									</p>
 						  </div>
 
@@ -126,21 +127,7 @@
 									</p>
 						  </div>
 						  
-						  {{-- EMAIL ------------------------}}
-						  <div class="form-group">
-									{{ Form::label('email', 'Email',
-											array('class' => 'control-label')) }}
-									{{ Form::text('email', Input::old('email'), 
-											array(
-					            	'name'        => 'email',
-					              'id'          => 'txt_username',
-					              'class'				=> 'form-control',
-					              'maxlength'   => '20'))
-									}}
-									<p class="text-danger">
-										{{ $errors->signin->first('email') }}
-									</p>
-						  </div>
+		
 						  
 
 					  <div class="form-group">
@@ -194,19 +181,9 @@
 			        <div class="row">
 			          <div class="col-md-12 text-right">
 
-			            <button class="btn btn-primary" id="bt_registrarse">Create </button>
+			            <button class="btn btn-primary" id="bt_registrarse">Edit </button>
 			            <button class="btn" id="bt_cerrar" onclick="cancel()" type="button">Close</button>
 			          </div>
 			        </div>
-					{{ Form::close() }}
-		      </div>
-		    </div>
-		  </div>
-		</div>
-		
-  {{HTML::script('js/authentication/signin.js');}}
-	<script type="text/javascript">
-		var url_home = "<?= URL::route('home') ?>";
-	</script>
-@stop
 
+@stop

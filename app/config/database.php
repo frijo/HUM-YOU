@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'musica',
+			'database'  => 'HUM_DB',
 			'username'  => 'root',
 			'password'  => '91j11d20a18a',
 			'charset'   => 'utf8',
